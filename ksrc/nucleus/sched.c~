@@ -58,6 +58,9 @@ void xnsched_register_classes(void)
 	xnsched_register_class(&xnsched_class_sporadic);
 #endif
 	xnsched_register_class(&xnsched_class_rt);
+#ifdef CONFIG_OPT_SCHED_TT
+	xnsched_register_class(&xnsched_class_tt);
+#endif
 }
 
 #ifdef CONFIG_XENO_OPT_WATCHDOG
